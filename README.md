@@ -117,12 +117,12 @@ Cuando dos integrantes editan la misma línea, Git genera un conflicto como este
 ```html
 <div class="team-card">
   <<<<<<< HEAD
-  <h3 class="team-card__name">María López</h3>
-  <p class="team-card__role">Frontend Developer</p>
-  <a href="https://github.com/marialopez">GitHub</a>
+OAOAOAOAOAOA  <h3 class="team-card__name">María López</h3>
+OAOAOA  <p class="team-card__role">Frontend Developer</p>
+OAOAOAOAOAOA  <a href="https://github.com/marialopez">GitHub</a>
   =======
   <h3 class="team-card__name">José Pérez</h3>
-  <p class="team-card__role">Backend Developer</p>
+OAOAOA  <p class="team-card__role">Backend Developer</p>
   <a href="https://github.com/joseperez">GitHub</a>
   >>>>>>> feat/member-jose
 </div>
@@ -131,14 +131,14 @@ Cuando dos integrantes editan la misma línea, Git genera un conflicto como este
 👉 La tarea del equipo es **resolverlo manualmente**, eliminando los marcadores y dejando un resultado correcto, por ejemplo:
 
 ```html
-<div class="team-card">
-  <h3 class="team-card__name">María López</h3>
-  <p class="team-card__role">Frontend Developer</p>
-  <a href="https://github.com/marialopez">GitHub</a>
-  <h3 class="team-card__name">José Pérez</h3>
+OAOAOA<div class="team-card">
+OAOAOA  <h3 class="team-card__name">María López</h3>
+OAOAOA  <p class="team-card__role">Frontend Developer</p>
+OAOAOAOAOAOAOAOAOA  <a href="https://github.com/marialopez">GitHub</a>
+OAOAOA  <h3 class="team-card__name">José Pérez</h3>
   <p class="team-card__role">Backend Developer</p>
-  <a href="https://github.com/joseperez">GitHub</a>
-</div>
+OAOAOA  <a href="https://github.com/joseperez">GitHub</a>
+OAOAOA</div>
 ```
 
 💡 Recuerden: **Git es como viajar en el tiempo** ⏳. Pueden traer de vuelta partes de commits anteriores y combinarlas con el presente. El reto no es programar mucho, sino **resolver conflictos, coordinarse y documentar todo con ramas y PRs**.
